@@ -1,2 +1,1 @@
-document.getElementById("year").textContent =
-    new Date().getFullYear();
+// No JavaScript needed. The pixel pickaxe animation uses CSS.
