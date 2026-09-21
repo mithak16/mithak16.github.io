@@ -41,6 +41,20 @@
     line-height: 1.1;
     letter-spacing: -0.04em;
   }
+.pickaxe {
+  transform-origin: 25% 80%;
+  animation: mine 1.4s steps(5, end) infinite;
+}
+
+@keyframes mine {
+  0%, 100% { transform: rotate(0deg); }
+  40% { transform: rotate(-25deg); }
+  60% { transform: rotate(20deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pickaxe { animation: none; }
+}
 </style>
 </head>
 <body>
