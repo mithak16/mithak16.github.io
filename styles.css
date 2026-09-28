@@ -138,8 +138,7 @@ h2{font-family:inherit;font-size:clamp(27px,3vw,38px);font-weight:600;letter-spa
 
 .home-copy { transform: translateY(50px); } 
 
-body, button, input, textarea, select, h1, h2, h3 { font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", sans-serif; }
-
+body, button, input, textarea, select, h1, h2, h3 { font-family: "Comic Neue", "Comic Sans MS", "Comic Sans", sans-serif; }
 #experience .card {
   background: #000;
   color: #fff;
