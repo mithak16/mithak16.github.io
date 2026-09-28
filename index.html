@@ -1,73 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LK Portfolio</title>
-  <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#d1c9ec">
+  <meta name="description" content="Lakshmi's portfolio: software, research, and community. Pick a channel and explore.">
+  <title>Lakshmi · On air</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect x='3' y='10' width='58' height='45' rx='12' fill='%23958aca'/%3E%3Crect x='9' y='16' width='39' height='32' rx='8' fill='%23fffaf0'/%3E%3Ccircle cx='54' cy='24' r='3' fill='%23fffaf0'/%3E%3Ctext x='15' y='39' font-family='monospace' font-size='20' fill='%23504a73'%3ELK%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
   <script src="script.js" defer></script>
-  <style>
-  body {
-    margin: 0;
-    background: white;
-    color: black;
-    font-family: Arial, sans-serif;
-  }
-
-  main {
-    min-height: 100vh;
-    min-height: 100svh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 28px;
-    padding: 24px;
-    box-sizing: border-box;
-    text-align: center;
-  }
-
-  .pickaxe {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-  }
-
-  h1 {
-    margin: 0;
-    color: black;
-    font-size: clamp(32px, 7vw, 80px);
-    font-weight: 800;
-    line-height: 1.1;
-    letter-spacing: -0.04em;
-  }
-.pickaxe {
-  transform-origin: 25% 80%;
-  animation: mine 1.4s steps(5, end) infinite;
-}
-
-@keyframes mine {
-  0%, 100% { transform: rotate(0deg); }
-  40% { transform: rotate(-25deg); }
-  60% { transform: rotate(20deg); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .pickaxe { animation: none; }
-}
-</style>
 </head>
 <body>
-  <main>
-    <svg class="pickaxe" viewBox="0 0 24 24" aria-hidden="true" shape-rendering="crispEdges">
-      <!-- Pixel pickaxe, drawn inline so no image download is needed. -->
-      <path fill="#171717" d="M7 1h9v2h3v2h2v3h2v9h-3v-6h-2V9h-2V7h-2V5H7z"/>
-      <path fill="#aab5bd" d="M8 2h7v2h3v2h2v3h2v6h-1v-5h-2V8h-2V6h-3V4H8z"/>
-      <path fill="#e2e8ed" d="M8 2h7v1H8zM15 4h3v1h-3zM18 6h2v1h-2z"/>
-      <path fill="#36261b" d="M13 7h3v3h-2v2h-2v2h-2v2H8v2H6v2H4v2H1v-3h2v-2h2v-2h2v-2h2v-2h2V9h2z"/>
-      <path fill="#ae7b43" d="M13 9h2v1h-2v2h-2v2H9v2H7v2H5v2H3v1H2v-1h2v-2h2v-2h2v-2h2v-2h2v-2h1z"/>
-    </svg>
-    <h1>work in progress...</h1>
-  </main>
+  <!-- Original artwork is rotated and cropped in CSS, never regenerated. -->
+  <div class="wallpaper" aria-hidden="true"><div class="wallpaper-crop"><img src="assets/moon.jpeg" alt="" width="675" height="1200" fetchpriority="high"></div></div>
+  <a class="skip-link" href="#screen">Skip to TV content</a>
+  <div class="page">
+    <header class="masthead"><a href="#home" class="wordmark" aria-label="Lakshmi home">lk<span>✳</span></a></header>
+    <main class="setup" aria-label="Lakshmi's portfolio">
+      <div class="television-wrap">
+        <div class="television">
+          <div class="screen-bezel">
+            <div class="screen" id="screen" tabindex="-1">
+              <div class="screen-top"><span id="channel-label">CH 01 / HOME</span><div class="screen-actions"><button type="button" id="motion-toggle" aria-pressed="false" aria-label="Pause Snoopy skating animation">Pause skating</button><a data-link="resume" class="resume-link" hidden>résumé ↗</a></div></div>
+              <div class="channel-content" id="channel-content">
+                <section class="channel home-channel" id="home" aria-labelledby="home-title">
+                  <div class="home-copy"><p class="eyebrow">HELLO, WORLD</p><h1 id="home-title">Hey! I'm <span>Lakshmi</span></h1><p class="intro">CS @ George Mason</p><div class="home-contact" id="home-contact"><a href="https://www.linkedin.com/in/lakshmi-katrapati/" target="_blank" rel="noopener noreferrer" aria-label="Lakshmi Katrapati on LinkedIn"><img src="assets/linkedin.png" alt="" width="736" height="736"></a></div></div>
+                </section>
+                <section class="channel" id="experience" aria-labelledby="experience-title" hidden>
+                  <article class="card"><span class="card-kicker">FAST ENTERPRISES · SUMMER 2026</span><h3>Software Implementation Intern</h3><p>Tech stack: C#, .NET, PostgreSQL, Postman</p>
+                    <p>•••••Shipped a fix for a plate reorder defect in Mississippi's statewide vehicle-services system, affecting all 82 counties.</p>
+                    <p>•••••Traced bad plate-ID data to a faulty variable reference and migrated legacy VB.NET logic to C#.</p> 
+                    <p>•••••Completed 64 code migrations and executed 58 test cases using Git branches, pull requests, and merge-conflict resolution.</p> 
+                    <p>•••••Also debugged a DMV address-display bug across C#, SQL, and UI layers, and wrote ~70 SQL queries to supply test data for state revenue staff.</p></article>                  
+                  <article class="card project-card"><span class="card-kicker">GEORGE MASON UNIVERSIT •Spring'26 & Fall'26</span><h3>Physics Teaching Assistant</h3><p>Served as the teaching assistant for calculus-based physics 1 for two semesters. Taught topics in kinematics, dynamics, rotations, and gravity.</p></article>
+                </section>
+                <section class="channel build-channel" id="projects" aria-labelledby="projects-title" hidden>
+                  <h2 id="projects-title">Work In Progress</h2>
+                  <picture><source media="(prefers-reduced-motion: reduce)" srcset="assets/snoopy-computer.png"><img class="typing-snoopy" src="assets/snoopy-typing.gif" alt="Snoopy typing on a typewriter" width="480" height="360"></picture>
+                </section>
+                <section class="channel" id="media" aria-labelledby="media-title" hidden>
+  <h2 id="media-title">Helping Seniors fight Deepfakes — My community work in the news</h2>
+  <a class="press-item" href="https://southasianherald.com/word-by-world-bridging-the-ai-gap-for-seniors-in-the-dmv/" target="_blank" rel="noopener noreferrer"><img src="assets/article3.png" alt="" width="640" height="360"><span class="press-cta">Read article ↗</span></a>
+  <a class="press-item press-right" href="https://www.onlinemadison.com/news/college-student-teaches-local-seniors-how-to-spot-ai-scams-and-deepfakes-9e0e24ae" target="_blank" rel="noopener noreferrer"><img src="assets/article2.png" alt="" width="640" height="360"><span class="press-cta">Read article ↗</span></a>
+  <a class="press-item" href="https://wtop.com/virginia/2026/09/a-george-mason-university-student-is-teaching-senior-communities-how-to-spot-ai-deepfakes/" target="_blank" rel="noopener noreferrer"><img src="assets/article1.png" alt="" width="640" height="360"><span class="press-cta">Read article ↗</span></a>
+
+</section>
+              </div>
+
+              <div class="skating-lane" aria-hidden="true"><div class="skating-track"><img class="skating-snoopy" src="assets/snoopy-skating.png" alt="" width="1243" height="1266"></div></div>
+            </div>
+          </div>
+        </div><div class="tv-feet" aria-hidden="true"><span></span><span></span></div>
+      </div>
+      <aside class="remote-wrap" aria-label="Portfolio remote"><p class="remote-hint">click to explore <span aria-hidden="true">⤵</span></p><div class="remote"><div class="remote-header"><span>EXPLORE</span><span class="remote-led" aria-hidden="true"></span></div><nav class="channels" aria-label="Choose a channel"><button type="button" data-channel="home" aria-controls="home" aria-pressed="true"><span class="number">01</span><span>Home</span></button><button type="button" data-channel="experience" aria-controls="experience" aria-pressed="false"><span class="number">02</span><span>Experience</span></button><button type="button" data-channel="projects" aria-controls="projects" aria-pressed="false"><span class="number">03</span><span>Projects + Research</span></button><button type="button" data-channel="media" aria-controls="media" aria-pressed="false"><span class="number">04</span><span>In Media</span></button></nav><div class="channel-rocker"><button type="button" data-step="-1" aria-label="Previous channel"><img class="arrow-art" src="assets/rewind.png" alt="" width="720" height="720"></button><button type="button" data-step="1" aria-label="Next channel"><img class="arrow-art forward" src="assets/rewind.png" alt="" width="720" height="720"></button></div><p class="remote-caption">pick a channel</p></div></aside>
+    </main>
+    <footer class="site-footer"><p>@2026 Katrapati</p></footer>
+    <noscript><p class="noscript-note">JavaScript is off. All portfolio sections are shown below one another.</p><style>.channel[hidden]{display:block!important}.channel-content{overflow:visible!important;max-height:none!important}.screen{height:auto!important}.remote-wrap,.tv-controls{display:none!important}.television{grid-template-columns:1fr!important}.setup{display:block!important}.screen-bottom{display:none!important}.channel{padding-bottom:2rem!important}</style></noscript>
+  </div>
 </body>
 </html>
